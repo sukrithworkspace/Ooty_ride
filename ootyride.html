@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OotyRide - premium Ooty sightseeing and vehicle booking website">
+<title>OotyRide | Premium Ooty Sightseeing</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="ootyride.jpg">
+
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav">
+    <a class="logo" href="#home">OOTYRIDE</a>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#places">Places</a>
+      <a href="#vehicles">Vehicles</a>
+      <a href="#weather">Weather</a>
+      <a href="#booking">Reserve</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <button class="btn btn-call" data-call>☎ Call</button>
+    <button class="burger" id="burger" aria-label="Open menu">☰</button>
+  </div>
+
+  <div class="drawer" id="drawer">
+    <a href="#home">Home</a>
+    <a href="#planner">AI Planner</a>
+    <a href="#places">Places</a>
+    <a href="#vehicles">Vehicles</a>
+    <a href="#weather">Weather</a>
+    <a href="#booking">Reserve</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#faq">FAQ</a>
+    <a href="#emergency">Emergency</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="eyebrow">PREMIUM OOTY SIGHTSEEING • NILGIRIS</span>
+      <h1>Explore Ooty.<span>The Easy Way.</span></h1>
+      <p>Discover lakes, tea estates, mountain viewpoints and hidden corners of Ooty with a comfortable vehicle and a simple booking experience.</p>
+
+      <div class="hero-actions">
+        <button class="btn btn-p" data-book>Book Your Trip →</button>
+        <a class="btn btn-outline" href="#places">Explore Places</a>
+      </div>
+
+      <div class="trust">
+        <span>✓ Free enquiry</span>
+        <span>✓ Fast reply</span>
+        <span>✓ Cars for every group</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><b>20</b><span>Sightseeing places</span></div>
+      <div class="stat"><b>4</b><span>Vehicle types</span></div>
+      <div class="stat"><b>24/7</b><span>Enquiry access</span></div>
+      <div class="stat"><b>Easy</b><span>Quick booking</span></div>
+    </div>
+  </div>
+</div>
+
+
+<section id="planner">
+  <div class="wrap planner-wrap">
+    <div class="head">
+      <h2>Plan your Ooty trip</h2>
+      <p class="lead">Choose your group, number of days and travel style. The planner recommends a vehicle and a simple route.</p>
+    </div>
+
+    <div class="planner card">
+      <div class="planner-title">
+        <h3>AI Trip Planner</h3>
+        <span class="tag">FREE</span>
+      </div>
+
+      <div class="row">
+        <label>How many people?</label>
+        <div class="counter">
+          <button data-count="people" data-change="-1">−</button>
+          <output id="peopleOutput">4</output>
+          <button data-count="people" data-change="1">+</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>How many days?</label>
+        <div class="counter">
+          <button data-count="days" data-change="-1">−</button>
+          <output id="daysOutput">2</output>
+          <button data-count="days" data-change="1">+</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Who is travelling?</label>
+        <div class="chips" id="travelStyle">
+          <button class="chip on" data-style="Family">👨‍👩‍👧 Family</button>
+          <button class="chip" data-style="Friends">👥 Friends</button>
+          <button class="chip" data-style="Couple">❤️ Couple</button>
+          <button class="chip" data-style="Corporate">💼 Corporate</button>
+        </div>
+      </div>
+
+      <button class="btn btn-g" id="planBtn">Create My Plan</button>
+      <div class="plan-output" id="planOutput"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>How it works</h2>
+      <p class="lead">A simple booking journey designed for mobile and desktop.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step-card card">
+        <div class="step-icon">01</div>
+        <h3>Tell us your group</h3>
+        <p>Choose people, days and travel style using the trip planner.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-icon">02</div>
+        <h3>Choose your places</h3>
+        <p>Add the sightseeing locations you want to include in your trip.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-icon">03</div>
+        <h3>Book through WhatsApp</h3>
+        <p>Submit your details and our team confirms availability and price.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="places">
+  <div class="wrap">
+    <div class="head">
+      <h2>Top Hill Destinations</h2>
+      <p class="lead">Explore 20 unique attractions across Ooty, Coonoor, Kodaikanal and Munnar. Each place has its own details and image.</p>
+    </div>
+
+    <div class="filters" id="placeFilters">
+      <button class="chip on" data-filter="all">All Places (20)</button>
+      <button class="chip" data-filter="Ooty">Ooty (6)</button>
+      <button class="chip" data-filter="Coonoor">Coonoor (5)</button>
+      <button class="chip" data-filter="Kodaikanal">Kodaikanal (5)</button>
+      <button class="chip" data-filter="Munnar">Munnar (4)</button>
+    </div>
+
+    <div class="place-grid" id="placeGrid"></div>
+  </div>
+</section>
+
+<section class="vehicles" id="vehicles">
+  <div class="wrap">
+    <div class="head">
+      <h2>Choose the Right Vehicle</h2>
+      <p class="lead">Vehicle recommendations change automatically according to your group size.</p>
+    </div>
+    <div class="vehicle-grid" id="vehicleGrid"></div>
+  </div>
+</section>
+
+<section class="weather-section" id="weather">
+  <div class="wrap">
+    <div class="head">
+      <h2>Check Ooty weather</h2>
+      <p class="lead">Live weather and a 7-day forecast using Open-Meteo.</p>
+    </div>
+
+    <div class="weather-grid">
+      <div>
+        <div class="weather-now" id="weatherNow">Loading Ooty weather...</div>
+        <div class="forecast" id="forecast"></div>
+      </div>
+
+      <div class="weather-side card">
+        <label for="travelDate">Your travel date</label>
+        <input type="date" id="travelDate">
+        <div class="advice" id="weatherAdvice">Choose a date to get travel advice.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Ready for your Ooty trip?</h2>
+      <p>Choose your places, vehicle and travel date. Your booking details will be prepared for WhatsApp.</p>
+      <button class="btn btn-p" data-book>Reserve Your Ride →</button>
+    </div>
+  </div>
+</section>
+
+<section id="feedback">
+  <div class="wrap">
+    <div class="head">
+      <h2>Traveller feedback</h2>
+      <p class="lead">Share your experience with OotyRide.</p>
+    </div>
+
+    <div class="feedback-grid">
+      <form class="form-card card" id="feedbackForm">
+        <h3>Write a review</h3>
+        <div class="stars" id="stars">
+          <button type="button" data-star="1">★</button>
+          <button type="button" data-star="2">★</button>
+          <button type="button" data-star="3">★</button>
+          <button type="button" data-star="4">★</button>
+          <button type="button" data-star="5">★</button>
+        </div>
+
+        <div class="field">
+          <label>Your name</label>
+          <input id="reviewName" required>
+        </div>
+
+        <div class="field" style="margin-top:12px">
+          <label>Your feedback</label>
+          <textarea id="reviewText" required></textarea>
+        </div>
+
+        <button class="btn btn-g" type="submit">Submit Feedback</button>
+      </form>
+
+      <div>
+        <div class="review-summary" id="reviewSummary">No reviews yet. Be the first traveller to leave feedback.</div>
+        <div id="reviewList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:850px">
+    <div class="head"><h2>Frequently asked questions</h2></div>
+
+    <details>
+      <summary>Do I pay on this website?</summary>
+      <p>No. This demo prepares the booking and opens WhatsApp. Payment can be discussed after your trip is confirmed.</p>
+    </details>
+
+    <details>
+      <summary>Can I select multiple places?</summary>
+      <p>Yes. Tap Add to Trip on any destination. Selected destinations are included in the booking.</p>
+    </details>
+
+    <details>
+      <summary>Is the price estimate final?</summary>
+      <p>No. The estimate is only a guide. Final pricing depends on vehicle, route, days and requirements.</p>
+    </details>
+
+    <details>
+      <summary>Can I change my travel date?</summary>
+      <p>Yes. Use the Change / Cancel option in the booking window and send the request through WhatsApp.</p>
+    </details>
+  </div>
+</section>
+
+<section id="emergency">
+  <div class="wrap">
+    <div class="head">
+      <h2>Emergency help</h2>
+      <p class="lead">For immediate danger in India, call 112. For your OotyRide team, use the contact button.</p>
+    </div>
+
+    <div class="card" style="padding:22px;max-width:760px">
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-red" href="tel:112">🚨 Call 112</a>
+        <a class="btn btn-call" data-call>☎ Call OotyRide</a>
+        <a class="btn btn-g" id="emergencyWhatsApp" target="_blank">💬 WhatsApp Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>OOTYRIDE</h3>
+        <p style="margin-top:8px">Premium Ooty sightseeing and vehicle trips made simple.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#planner">AI Planner</a>
+        <a href="#places">Places</a>
+        <a href="#vehicles">Vehicles</a>
+        <a href="#weather">Weather</a>
+        <a data-book>Book Now</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a id="footerWhatsApp" target="_blank">💬 WhatsApp</a>
+        <a data-call>☎ Call</a>
+        <span style="display:block;margin-top:7px">📍 Ooty, Nilgiris</span>
+      </div>
+    </div>
+    <div class="copy">© 2026 OotyRide. Ooty, Nilgiris, Tamil Nadu.</div>
+  </div>
+</footer>
+
+<button class="fab" id="chatToggle">✦ AI Assistant</button>
+
+<div class="chat" id="chat">
+  <div class="chat-head">
+    <div><strong>OotyRide AI</strong><small style="display:block;color:#c9ddd4">Trip assistant</small></div>
+    <button id="chatClose">×</button>
+  </div>
+  <div class="messages" id="messages">
+    <div class="message bot">Hello! 👋 I can help with places, vehicles, prices, weather and booking.</div>
+  </div>
+  <div class="quick">
+    <button data-chat="Best places">Best places</button>
+    <button data-chat="Vehicle guide">Vehicles</button>
+    <button data-chat="Weather">Weather</button>
+    <button data-chat="Book trip">Book trip</button>
+  </div>
+  <div class="chat-input">
+    <input id="chatInput" placeholder="Ask about your trip...">
+    <button id="chatSend">Send</button>
+  </div>
+</div>
+
+<div class="modal" id="bookingModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <strong>OotyRide Booking</strong>
+      <button data-close="bookingModal">×</button>
+    </div>
+
+    <div class="modal-body" id="bookingBody"></div>
+    <div class="modal-footer" id="bookingFooter">
+      <button class="btn btn-outline" style="background:#edf4f0;color:#123c2d" id="bookingBack">← Back</button>
+      <button class="btn btn-g" id="bookingNext">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="placeModal">
+  <div class="modal-box place-modal">
+    <div class="modal-head">
+      <strong id="placeTitle">Place</strong>
+      <button data-close="placeModal" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <p id="placeDesc" class="place-desc"></p>
+      <div class="chips place-tabs" id="placeTabs"></div>
+      <div class="map-box">
+        <iframe id="placeFrame" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <p class="place-note" id="placeNote">🚑 Ambulance: 108 &nbsp;•&nbsp; Emergency: 112</p>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-outline" id="placeOpenMaps" target="_blank" rel="noopener" style="background:#edf4f0;color:#123c2d;border-color:#dbe8e1">Open in Google Maps ↗</a>
+      <button class="btn btn-g" id="placeAdd">+ Add to Trip</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="cancelModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <strong>Change / Cancel Trip</strong>
+      <button data-close="cancelModal">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="cancel-actions">
+        <button class="chip on" id="cancelMode">Cancel Trip</button>
+        <button class="chip" id="changeMode">Change Date</button>
+      </div>
+
+      <div class="field">
+        <label>Booking ID or mobile number</label>
+        <input id="cancelId" placeholder="OOTY-XXXXXX">
+      </div>
+
+      <div class="field" id="newDateField" style="margin-top:15px;display:none">
+        <label>New travel date</label>
+        <input type="date" id="newDate">
+      </div>
+
+      <div class="field" style="margin-top:15px">
+        <label>Reason</label>
+        <textarea id="cancelReason" placeholder="Optional"></textarea>
+      </div>
+
+      <p class="error" id="cancelError"></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-red" id="cancelSend">Send Request on WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-bar">
+  <button onclick="location.href='#home'"><span>⌂</span>Home</button>
+  <button onclick="location.href='#places'"><span>⌖</span>Places</button>
+  <button data-book><span>▣</span>Book</button>
+  <button id="mobileChat"><span>✦</span>AI</button>
+  <button id="mobileMore"><span>⋯</span>More</button>
+</div>
+
+<script>
+/* =========================
+   OOTYRIDE CONFIGURATION
+========================= */
+const WA_NUMBER = "919999999999"; 
+const CALL_NUMBER = "+919999999999"; 
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+const PLACES = [
+  {id:"doddabetta",name:"Doddabetta Peak",category:"Ooty",distance:"9 km from Ooty centre",description:"Ooty’s famous high-altitude viewpoint offering sweeping Nilgiri mountain scenery and cool misty views.",image:"https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2019/07/Doddabetta-Peak-Ooty.jpg?ssl=1&w=1200"},
+  {id:"ooty-lake",name:"Ooty Lake",category:"Ooty",distance:"2.5 km from Ooty centre",description:"A popular Ooty lake known for boating, lakeside walks and relaxed family sightseeing.",image:"https://images.openai.com/static-rsc-4/RHfGNLpWTb2VTFhMDv6jIsI5-UGjfw0g6biiVYHF82G0mynbu9rpgVeKRl-7KrJOCNWohQzMk4CwjyCaOrOT27pw75T0SUJ_s1OuLk_Aidk1WoJIJ6_zYvJf13sQaFqbtUYwyJN2dqQnjBpM60OblGnAO5tbQpWE-gUmA9oDbh4PVSdUrIqyB5LhetDOIrJ3?purpose=fullsize"},
+  {id:"dolphins-nose",name:"Dolphin's Nose",category:"Coonoor",distance:"12 km from Coonoor centre",description:"A dramatic Coonoor viewpoint with panoramic views of the surrounding Nilgiri hills and valleys.",image:"https://images.openai.com/static-rsc-4/UmbWEQShhSXd4WoSk_Ubmu_lLes9XZQOs8JEnMqN8FjznCdRQ1Hsj18oUd6GA9nXP2MdkoEiKuHKcb_lyMRUnyUe06lZFD9ZzyGrBf9NQQJhdlfyUXvSnsGrtqms7zDBoWctVm8vjK4BXBJT9V7hbKyHAHbUDaRCWNYfhfeepwzIG_yXqG3r8B7POfvOgdqY?purpose=inline"},
+  {id:"lambs-rock",name:"Lamb's Rock",category:"Coonoor",distance:"8 km from Coonoor centre",description:"A scenic cliff viewpoint surrounded by forested hills, ideal for photographs and peaceful nature views.",image:"https://images.openai.com/static-rsc-4/UepWxsxChdt61pRYskU6xnzp9GxVhz1qNSUjVjBIXTnp3wBPfn5gIDxTGelXRvy0HGk4M7X-_tT2TIGB0qn125ycJD16YShHdbgWh_L1uV0n6-LrnF2zq89DS-wykC4lBYPal2C6sEBXzXTmK6EpfXdBEZYzk_Yuqv5hJjfcXdRUg6tS2zgGduz2eULvnYtQ?purpose=fullsize"},
+  {id:"botanical-garden",name:"Botanical Garden",category:"Ooty",distance:"2.3 km from Ooty centre",description:"A large landscaped garden featuring lawns, flowering plants, old trees and peaceful walking paths.",image:"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85"},
+  {id:"kodaikanal-lake",name:"Kodaikanal Lake",category:"Kodaikanal",distance:"Central Kodaikanal",description:"A star-shaped lake in the heart of Kodaikanal, popular for boating, cycling and lakeside walks.",image:"https://images.openai.com/static-rsc-4/3s5se0oyoUwLUIgzU8__Xz0HX_xTnwo4O_rK_hcDmzcOkZHREWcZmWIkYHYrQFPLbBC7fKecQtuUGJPvKGqw1-psoHMBGRgjC34XFRA9ko4VEviSIvsbe_RDT7k1f6rBnzwgeFrMYDwIEsS8VfLXEtKaZ77WclWYCGrKApGqdL_ncPO3Mo36dg84SL0oTTxx?purpose=fullsize"},
+  {id:"pillar-rocks",name:"Pillar Rocks",category:"Kodaikanal",distance:"8 km from Kodaikanal centre",description:"Three striking granite rock pillars rising above the surrounding forest and misty mountain landscape.",image:"https://images.openai.com/static-rsc-4/F77sqh2Mi5aNqF6sEyV-l2UrwiWxxYBOwQBjvJ-3OMYtEllwBrZYJ5HBAl4Ml4mPXwF8hm8t_OWz1EPgTfNuc-d0AO6YzQvUH1gJ6S1IFveoBjiBSDwM9ReM7Rg-SMyy-Firb-K1ipy_37dC8vzkbDfPeyKeSp6Sjy9vkqSKz0d6vMROxpTPGXFBwsTYDovC?purpose=fullsize"},
+  {id:"munnar-tea-gardens",name:"Tea Gardens",category:"Munnar",distance:"Around Munnar",description:"Rolling green tea plantations create Munnar’s iconic landscape and offer beautiful scenic drives and photo stops.",image:"https://images.openai.com/static-rsc-4/F7gnufWQ4HHko9KUuJC2uWLXQ36qMDVnFcft8gqcpE9bZEcWRRUcWywcr9sQ7lJ8RtVvVRNaIU4BI0s12v1PXALr1IQoSKGjtB7mfYN3x2lLSsKTF3ljtmfUUIupACRsK8cNYM5zRHnzJ6mfWIaEKyrbFO1Xs50NlbkeNHjQzkoinOuB_OFsq1wX5GCbQbHD?purpose=fullsize"},
+  {id:"mattupetty-dam",name:"Mattupetty Dam",category:"Munnar",distance:"13 km from Munnar centre",description:"A scenic reservoir surrounded by green hills, with boating and viewpoints along the route.",image:"https://images.openai.com/static-rsc-4/A8V0R9DV_tG3ScHRzl7Vi_lLyYK4D8nys6-G_VpQl3ND-O9FZZo8MWv3hKflAx2L4VriCHpCjXCpBCbL6MEb8NbWESIT7oHrZUm3qnSD2P055T0XkyVaQ9J954jOFriHQw-zC_yswG8P3QK9vo9QxpkE5QUbXOUvRe0v8ULCEwui04-sjPGCgyISGvzI_jaU?purpose=fullsize"},
+  {id:"eravikulam",name:"Eravikulam National Park",category:"Munnar",distance:"13 km from Munnar centre",description:"A mountain national park famous for rolling grasslands, wildlife and spectacular high-range scenery.",image:"https://images.openai.com/static-rsc-4/BG4GyyFafKMTXpuZeRR6D0-xfrBrTHRWnwvSqQoKlOeTFP8oBlQ2UoFONHflJT1ZejztFkJdslx3iRRIx0luMydNaWX2H3swp5p-0l76MsIw392462glrkCplba2F5n3FBPtG3FaoxHiqsU9CiMcwbwYFCED1mRDVZq1ihZg4V3CxR8BD3IXFWT9qezivVSy?purpose=fullsize"},
+  {id:"rose-garden",name:"Rose Garden",category:"Ooty",distance:"1.8 km from Ooty centre",description:"Beautiful terraced gardens filled with colourful roses and hillside views across Ooty.",image:"https://images.openai.com/static-rsc-4/vdziYA9s-vAsf8a3WC5XQB5xixVtmMHZdqJg_SA9OXiLKBHeXmfIhQDwaklbS2XTUw0u4ebDgaqu13CEzOwVoWVPvt8G765v20_32uhd5JfocVDbiZDMoz_fnAjJ5JtVzxYfq44Ws_YJ9m603arDBAfsb3ZepYuTigZ6CNSpC_0SFWznbe-6hy93B953BfF7?purpose=fullsize"},
+  {id:"sims-park",name:"Sim's Park",category:"Coonoor",distance:"2 km from Coonoor centre",description:"A well-known botanical garden in Coonoor with landscaped paths, plants and peaceful green spaces.",image:"https://images.openai.com/static-rsc-4/CXLL8QooWakFDViBqUt2vwVUdSYtKBR5IvOtpJvV1pVzegSlYe7O3iK8VY3xSzqOQanSt0Rg_bGG5MEmsLNYpbV8CWGrulmUejk8XCLGJksg4C4T9TfUi8bBsacJIHqI8ez2IHJx4NIaNMSaHVWdJd1Kv2Au0U4XS9LO-PwkOkhSuwSRf6bY5Z6-1-5iQA_7?purpose=fullsize"},
+  {id:"coakers-walk",name:"Coaker's Walk",category:"Kodaikanal",distance:"1 km from Kodaikanal centre",description:"A scenic pedestrian path along the hillside offering panoramic valley and mountain views.",image:"https://images.openai.com/static-rsc-4/mE9S2x38fQ7C6H95f9dOP0HAl769hp3Tt1YQ2_JJWXdNkGKCnKocgPYI6Lw4-mhgqmlT9dx8PiICcL5onXl_ueqth95-fh0fUWzD1m9F-OSRgmHYPlE8XqRBIkeJBW56oprVkeBhOU_uwUxG9yTyaU4vrJpGWGf1W-tFgIcwfJWCcvv0db3xdNzN1Uj9M6I_?purpose=fullsize"},
+  {id:"pine-forest",name:"Pine Forest",category:"Kodaikanal",distance:"8 km from Kodaikanal centre",description:"A peaceful pine-covered landscape popular for nature walks, photography and scenic views.",image:"https://images.openai.com/static-rsc-4/p2ZFiFEr9bfjuomFi02duFqM8BPL97eVa18zEFBcetlfsRjidf-EmX_mekrZje56qfESUqF6gM3oYeS7dEM41sm7exMqk9jzZ7vfCFCZhpXY6w5cbxiA17zc1B8ogofQUZKGT7hoSgPcm3sCHjfSwhaDaexRnQYDNltgfgAakC2N4Fe1F6ro6kf6k3pol9Q4?purpose=fullsize"},
+  {id:"top-station",name:"Top Station",category:"Munnar",distance:"32 km from Munnar centre",description:"A high-altitude viewpoint known for dramatic Western Ghats scenery, clouds and wide valley views.",image:"https://images.openai.com/static-rsc-4/1Rc6_gcQj-hNZx4HJvFRKNmrsRBpi86JI09X-dD7AdvS2M2WA7NwX9yzHMNdMFnYXi8UlRIxbEucRzMGtTLhUJxW28lvCMENjNKt0ru2M2upz1_lbHU0RjGB9ZPqHlWxTk-iV0zFyDW-6kiCjTqUM69KTQ4nYfbbdn6LzcmzfD-vX9K0WH8QxFg2wsn_mWtl?purpose=fullsize"},
+  {id:"echo-point",name:"Echo Point",category:"Munnar",distance:"15 km from Munnar centre",description:"A popular lakeside viewpoint where the surrounding hills create a natural echo effect.",image:"https://images.openai.com/static-rsc-4/6SN5HMMl1VAjoPEe33S3bRr3inEroBftOwuZb-bVUz-ljccoPauEd8VJJsLvmu4RC23LGceaTQcR-xEXxnGxLvuEqKT0x55D8Lcvu8g-e83OjQ2c75cQZ0VdulyzyrBjOAW5hLQVP2N9WSUi7bc_-OkR-tpKC3qCXfdEgE1Ggm6nTvp-pkffQgJ3IYr34nNC?purpose=fullsize"},
+  {id:"toy-train",name:"Toy Train",category:"Ooty",distance:"Ooty railway station",description:"The Nilgiri Mountain Railway experience through tunnels, curves, forests and spectacular hill scenery.",image:"https://images.openai.com/static-rsc-4/FgIKogiN4O6JebR503oTxDYbc-yIW6Y42ygNVwaBj7TlKkVVtsOwUuL9SNE-2mX0ax56LyxZDYB6DQbeHhOzdv0h9lFwOi4SBdYDdeDdM4uaMUQw02rdrZNaoe3yMChuITdaydNMuXVSc_GOSa8_7pG6yIPecxSCZ1zBndCszrCXk3rmJZvkBwLNHh-gxeoz?purpose=fullsize"},
+  {id:"coonoor-tea-estates",name:"Tea Estates",category:"Coonoor",distance:"Around Coonoor",description:"Green tea estates surrounding Coonoor provide scenic plantation landscapes and peaceful mountain drives.",image:"https://images.openai.com/static-rsc-4/LbvrFX-oFE8xGjHOmcv-j2ZAPJ5TTXvqsxYzrtiEAVNzWvWKZBSEgMvN3x13j_5VdViRMeJ87UQfjMzWQrauy4V-4JC-gvcDxW4pBzR_IUSpb1EKJmG9jcKVXygGvrT7Mnqqyj3amBXKjNg-QvtoKANnheBFfxguT_D-f4Y_xIcf3BdzDSwQpomhMqf1LKJ9?purpose=fullsize"},
+  {id:"bryant-park",name:"Bryant Park",category:"Kodaikanal",distance:"1 km from Kodaikanal centre",description:"A landscaped botanical park near Kodaikanal Lake with flowers, trees and pleasant walking areas.",image:"https://images.openai.com/static-rsc-4/QmZvBS86eVco84JqRbpPVRxFfFVX4R-25n2bsnOvshb2vIFuRjXv60MuTBKowDpGtcdrW82EMfzsLS6QERghvHnaXqKNC3-2iY1Rph4qsZM6HIDJ_70ji6JHzh3PnIx872H_j3i2AISoC1vYw64chj-SsT-M7gXFq9oJUufANY_0IUVci5mHtBvrCdURBKFM?purpose=fullsize"},
+  {id:"ketti-valley",name:"Ketti Valley View",category:"Ooty",distance:"7 km from Ooty centre",description:"A scenic viewpoint overlooking the vast Ketti Valley and surrounding Nilgiri mountain slopes.",image:"https://images.openai.com/static-rsc-4/WBdvSlr2Xnetb3F0oadtNKyEi_NEKH40ezVpU0Z1VlSzAT9NrKeL96qBVkYf_3tp6WwKVZnhsi9Hr2e21egBcLCt8tFpQXcNCDx0dq5NrK4Y-IGsO_1gfqqhz8a2NDGqs2SDatif6OlESFuCvaZXTgjgeLVtDhx7_nZYw2JT5g7vR7toAXRYAQLdikdoADwI?purpose=fullsize"}
+];
+
+const VEHICLES = [
+  {name:"Sedan",image:"https://akm-img-a-in.tosshub.com/indiatoday/images/story/202501/dzire-1-000km-304345415-16x9_0.jpg?VersionId=FHrURdb6jxoX9ssWXCF7IT23DaLz62NJ&size=690%3A388",people:"1–4 people",desc:"Comfortable and economical for couples or small families.",min:1,max:4},
+  {name:"SUV",image:"https://imgd-ct.aeplcdn.com/640X480/vimages/202602/4376387_12953_1_1770296563424.jpg?q=80",people:"5–6 people",desc:"Extra space for family groups and luggage.",min:5,max:6},
+  {name:"Innova",image:"https://static-cdn.cars24.com/prod/auto-news24-cms/Newsroom/2025/02/03/e7dd56a5-4e02-45d3-9ec2-b65b1bd99c4c-toyota-innova-crysta-exterior-toyota.webp?dpr=3&format=auto&optimize=low&quality=50&w=276",people:"7 people",desc:"Premium group comfort for longer sightseeing routes.",min:7,max:7},
+  {name:"Tempo Traveller",image:"https://amantourrentals.com/uploads/car-1774509540-5532.png",people:"8–12 people",desc:"Best for larger families, friends and group trips.",min:8,max:12}
+];
+
+let state = {
+  people:4,
+  days:2,
+  style:"Family",
+  places:[],
+  vehicle:"Sedan"
+};
+
+const BOOKING_KEY = "ootyrideBookings";
+const REVIEW_KEY = "ootyrideReviews";
+
+function getBookings(){
+  try{return JSON.parse(localStorage.getItem(BOOKING_KEY)) || []}
+  catch{return []}
+}
+function saveBookings(x){localStorage.setItem(BOOKING_KEY,JSON.stringify(x))}
+
+function whatsapp(text){
+  return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+}
+
+function money(n){
+  return "₹" + Math.round(n).toLocaleString("en-IN");
+}
+
+function estimate(vehicle,days,people){
+  const base = {
+    "Sedan":2200,
+    "SUV":3000,
+    "Innova":3800,
+    "Tempo Traveller":5200
+  }[vehicle] || 2200;
+  return base * days;
+}
+
+function recommendedVehicle(p){
+  if(p<=4)return "Sedan";
+  if(p<=6)return "SUV";
+  if(p===7)return "Innova";
+  return "Tempo Traveller";
+}
+
+/* NAV */
+window.addEventListener("scroll",()=>{
+  $("#nav").classList.toggle("solid",window.scrollY>30);
+});
+$("#burger").onclick=()=>$("#drawer").classList.toggle("open");
+$$(".drawer a").forEach(a=>a.onclick=()=>$("#drawer").classList.remove("open"));
+
+/* CALL / WHATSAPP */
+$$("[data-call]").forEach(el=>{
+  el.href="tel:"+CALL_NUMBER;
+  el.onclick=()=>{ if(el.tagName!=="A") location.href="tel:"+CALL_NUMBER; };
+});
+const heroWA = whatsapp("Hi OotyRide, I want to know about an Ooty sightseeing trip.");
+$("#emergencyWhatsApp").href=heroWA;
+$("#footerWhatsApp").href=heroWA;
+
+/* PLANNER */
+function updatePlanner(){
+  $("#peopleOutput").textContent=state.people;
+  $("#daysOutput").textContent=state.days;
+
+  const v=recommendedVehicle(state.people);
+  state.vehicle=v;
+  renderVehicles();
+}
+$$("[data-count]").forEach(btn=>{
+  btn.onclick=()=>{
+    const key=btn.dataset.count;
+    const delta=Number(btn.dataset.change);
+    const min=key==="people"?1:1;
+    const max=key==="people"?12:7;
+    state[key]=Math.max(min,Math.min(max,state[key]+delta));
+    updatePlanner();
+  };
+});
+
+$$("[data-style]").forEach(btn=>{
+  btn.onclick=()=>{
+    state.style=btn.dataset.style;
+    $$("[data-style]").forEach(x=>x.classList.toggle("on",x===btn));
+  };
+});
+
+function createPlan(){
+  const v=recommendedVehicle(state.people);
+  const routes = [
+    ["Doddabetta Peak","Ooty Lake","Botanical Garden"],
+    ["Dolphin's Nose","Lamb's Rock","Sim's Park"],
+    ["Kodaikanal Lake","Pillar Rocks","Coaker's Walk"],
+    ["Tea Gardens","Mattupetty Dam","Echo Point"]
+  ];
+
+  let html=`
+    <strong>${state.people} people • ${state.days} days • ${state.style}</strong>
+    <p style="margin-top:5px">Recommended vehicle: <b>${v}</b></p>
+    <p style="margin-top:4px">Approximate vehicle estimate: <b>${money(estimate(v,state.days,state.people))}</b></p>
+    <ol class="plan-list">
+  `;
+
+  for(let i=0;i<state.days;i++){
+    const r=routes[i%routes.length];
+    html+=`<li><b>Day ${i+1}:</b> ${r.join(" → ")}</li>`;
+  }
+  html+=`</ol><button class="btn btn-g" style="margin-top:14px" data-book>Book This Plan</button>`;
+
+  $("#planOutput").innerHTML=html;
+  $("#planOutput").classList.add("show");
+  $("#planOutput").querySelector("[data-book]").onclick=openBooking;
+}
+$("#planBtn").onclick=createPlan;
+
+/* PLACES */
+function renderPlaces(filter="all"){
+  const grid=$("#placeGrid");
+  grid.innerHTML="";
+
+  PLACES.filter(p=>filter==="all"||p.category===filter).forEach(p=>{
+    const selected=state.places.includes(p.id);
+    const card=document.createElement("article");
+    card.className="place";
+    card.innerHTML=`
+      <div class="place-image" style="background-image:url('${p.image}')" data-open="${p.id}" role="button" tabindex="0" aria-label="Open ${p.name} map and nearby help">
+        <span class="place-badge">${p.category}</span>
+        <span class="location-chip">🗺 Tap for map</span>
+      </div>
+      <div class="place-body">
+        <h3 data-open="${p.id}" style="cursor:pointer">${p.name}</h3>
+        <p>${p.description}</p>
+        <div class="distance">📍 ${p.distance}</div>
+        <div class="place-actions">
+          <button class="explore" data-open="${p.id}">🗺 Map &amp; Nearby</button>
+          <button class="${selected?"on":""}" data-place="${p.id}">
+            ${selected?"✓ Added to Trip":"+ Add to Trip"}
+          </button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  // Make sure every place card always shows an image, even if a remote photo fails.
+  $$(".place-image").forEach(el=>{
+    const match=el.style.backgroundImage.match(/url\('([^']+)'\)/);
+    if(!match)return;
+    const test=new Image();
+    test.onerror=()=>{
+      el.style.backgroundImage='url("https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2019/07/Doddabetta-Peak-Ooty.jpg?ssl=1&w=1600")';
+    };
+    test.src=match[1];
+  });
+
+  $$("[data-place]").forEach(btn=>{     btn.onclick=()=>togglePlace(btn.dataset.place);   });   $$
+("[data-open]").forEach(el=>{
+    el.onclick=()=>openPlace(el.dataset.open);
+    el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openPlace(el.dataset.open)}};
+  });
+}
+
+function togglePlace(id){
+  if(state.places.includes(id)){
+    state.places=state.places.filter(x=>x!==id);
+  }else{
+    state.places.push(id);
+  }
+  renderPlaces(document.querySelector("#placeFilters .chip.on").dataset.filter);
+}
+
+/* PLACE DETAIL MODAL */
+const PLACE_TABS=[
+  {key:"map",label:"🗺 Map"},
+  {key:"restaurant",label:"🍽 Restaurants"},
+  {key:"medical",label:"💊 Medical"},
+  {key:"hospital",label:"🏥 Hospitals"}
+];
+let activePlace=null, activeTab="map";
+
+function placeLocation(p){
+  const cityByCategory={
+    Ooty:"Ooty, Nilgiris, Tamil Nadu",
+    Coonoor:"Coonoor, Nilgiris, Tamil Nadu",
+    Kodaikanal:"Kodaikanal, Dindigul, Tamil Nadu",
+    Munnar:"Munnar, Idukki, Kerala"
+  };
+  return p.name+", "+(cityByCategory[p.category]||"Ooty, Nilgiris, Tamil Nadu");
+}
+function placeQuery(p,tab){
+  const loc=placeLocation(p);
+  return {
+    map:loc,
+    restaurant:"restaurants near "+loc,
+    medical:"medical shops pharmacy near "+loc,
+    hospital:"hospitals near "+loc
+  }[tab];
+}
+function showPlaceTab(tab){
+  activeTab=tab;
+  const q=encodeURIComponent(placeQuery(activePlace,tab));
+  $("#placeFrame").src="https://maps.google.com/maps?q="+q+"&output=embed&z=14";
+  $("#placeOpenMaps").href="https://www.google.com/maps/search/?api=1&query="+q;   $$("#placeTabs .chip").forEach(c=>c.classList.toggle("on",c.dataset.tab===tab));
+  $("#placeNote").style.display=(tab==="hospital"||tab==="medical")?"block":"none";
+}
+function openPlace(id){
+  activePlace=PLACES.find(p=>p.id===id);
+  if(!activePlace)return;
+  $("#placeTitle").textContent=activePlace.name;
+  $("#placeDesc").textContent=activePlace.description+" • "+activePlace.distance;
+  $("#placeTabs").innerHTML=PLACE_TABS.map(t=>`<button class="chip" data-tab="${t.key}">${t.label}</button>`).join("");
+  $$("#placeTabs .chip").forEach(c=>c.onclick=()=>showPlaceTab(c.dataset.tab));
+  updatePlaceAdd();
+  $("#placeModal").classList.add("open");
+  showPlaceTab("map");
+}
+function updatePlaceAdd(){
+  const on=activePlace&&state.places.includes(activePlace.id);
+  $("#placeAdd").textContent=on?"✓ Added to Trip":"+ Add to Trip";
+}
+$("#placeAdd").onclick=()=>{togglePlace(activePlace.id);updatePlaceAdd()};
+$("#placeModal").addEventListener("click",e=>{
+  if(e.target.id==="placeModal")closeModal("placeModal");
+});
+
+$$("[data-filter]").forEach(btn=>{   btn.onclick=()=>{     $$
+("[data-filter]").forEach(x=>x.classList.remove("on"));
+    btn.classList.add("on");
+    renderPlaces(btn.dataset.filter);
+  };
+});
+
+/* VEHICLES */
+function renderVehicles(){
+  const grid=$("#vehicleGrid");
+  grid.innerHTML="";
+  const recommended=recommendedVehicle(state.people);
+
+  VEHICLES.forEach(v=>{
+    const selected=state.vehicle===v.name;
+    const card=document.createElement("article");
+    card.className="vehicle"+(selected?" selected":"");
+    card.innerHTML=`
+      <img class="vehicle-image" src="${v.image}" alt="${v.name} vehicle" loading="lazy" referrerpolicy="no-referrer">
+      <h3>${v.name}</h3>
+      <p>${v.desc}</p>
+      <div class="vehicle-meta">
+        <span>${v.people}</span>
+        <span>${v.name===recommended?"Best match":"Available"}</span>
+      </div>
+      <button data-vehicle="${v.name}">${selected?"Selected":"Choose Vehicle"}</button>
+    `;
+    grid.appendChild(card);
+  });
+
+  $$("[data-vehicle]").forEach(btn=>{
+    btn.onclick=()=>{
+      state.vehicle=btn.dataset.vehicle;
+      renderVehicles();
+    };
+  });
+}
+
+/* BOOKING MODAL */
+let bookingStep=1;
+
+function openBooking(){
+  bookingStep=1;
+  $("#bookingModal").classList.add("open");
+  renderBooking();
+}
+function closeModal(id){$("#"+id).classList.remove("open");if(id==="placeModal")$("#placeFrame").src="about:blank"}
+
+$$("[data-book]").forEach(btn=>btn.onclick=openBooking); $$
+("[data-close]").forEach(btn=>btn.onclick=()=>closeModal(btn.dataset.close));
+
+function renderBooking(){
+  const body=$("#bookingBody");
+  const footer=$("#bookingFooter");
+
+  if(bookingStep<=3){
+    body.innerHTML=`
+      <div class="booking-steps">
+        <span class="booking-step ${bookingStep===1?"on":""}">1. Group</span>
+        <span class="booking-step ${bookingStep===2?"on":""}">2. Places</span>
+        <span class="booking-step ${bookingStep===3?"on":""}">3. Vehicle</span>
+        <span class="booking-step ${bookingStep===4?"on":""}">4. Details</span>
+      </div>
+      ${bookingStep===1?bookingGroup():bookingStep===2?bookingPlaces():bookingVehicle()}
+    `;
+    footer.style.display="flex";
+    $("#bookingBack").style.visibility=bookingStep===1?"hidden":"visible";
+    $("#bookingNext").textContent="Next →";
+  }else{
+    body.innerHTML=bookingDetails();
+    footer.style.display="flex";
+    $("#bookingBack").style.visibility="visible";
+    $("#bookingNext").textContent="Submit & Open WhatsApp";   }    $$("[data-book-choice]").forEach(btn=>{
+    btn.onclick=()=>{
+      if(btn.dataset.type)state.style=btn.dataset.type;
+      if(btn.dataset.place){
+        const id=btn.dataset.place;
+        state.places.includes(id)
+          ? state.places=state.places.filter(x=>x!==id)
+          : state.places.push(id);
+      }
+      if(btn.dataset.vehicle)state.vehicle=btn.dataset.vehicle;
+      renderBooking();
+    };
+  });
+}
+
+function bookingGroup(){
+  return `
+    <h2>Who is travelling?</h2>
+    <p class="lead">Select your travel group.</p>
+    <div class="booking-options" style="margin-top:18px">
+      ${["Family","Friends","Couple","Corporate"].map(x=>`
+        <button class="booking-option ${state.style===x?"selected":""}" data-book-choice data-type="${x}">
+          <span>${x==="Family"?"👨‍👩‍👧":x==="Friends"?"👥":x==="Couple"?"❤️":"💼"}</span>${x}
+        </button>
+      `).join("")}
+    </div>
+
+    <div class="form-grid" style="margin-top:22px">
+      <div class="field">
+        <label>People</label>
+        <input id="bookingPeople" type="number" min="1" max="12" value="${state.people}">
+      </div>
+      <div class="field">
+        <label>Days</label>
+        <select id="bookingDays">
+          ${[1,2,3,4,5,6,7].map(x=>`<option ${x===state.days?"selected":""}>${x}</option>`).join("")}
+        </select>
+      </div>
+    </div>
+  `;
+}
+
+function bookingPlaces(){
+  return `
+    <h2>Select places</h2>
+    <p class="lead">Choose one or more sightseeing destinations.</p>
+    <div class="booking-options" style="margin-top:18px">
+      ${PLACES.map(p=>`
+        <button class="booking-option ${state.places.includes(p.id)?"selected":""}" data-book-choice data-place="${p.id}">
+          <span>📍</span>${p.name}
+          <small>${p.category}</small>
+        </button>
+      `).join("")}
+    </div>
+  `;
+}
+
+function bookingVehicle(){
+  return `
+    <h2>Choose your vehicle</h2>
+    <p class="lead">Recommended: <b>${recommendedVehicle(state.people)}</b></p>
+    <div class="booking-options" style="margin-top:18px">
+      ${VEHICLES.map(v=>`
+        <button class="booking-option ${state.vehicle===v.name?"selected":""}" data-book-choice data-vehicle="${v.name}">
+          <span class="vehicle-choice-name">${v.name}</span>
+          <small>${v.people}</small>
+        </button>
+      `).join("")}
+    </div>
+  `;
+}
+
+function bookingDetails(){
+  return `
+    <div class="booking-steps">
+      <span class="booking-step">1. Group</span>
+      <span class="booking-step">2. Places</span>
+      <span class="booking-step">3. Vehicle</span>
+      <span class="booking-step on">4. Details</span>
+    </div>
+
+    <h2>Your details</h2>
+    <p class="lead">These details will be sent to OotyRide on WhatsApp.</p>
+
+    <form id="bookingForm" class="form-grid" style="margin-top:20px">
+      <div class="field">
+        <label>Name *</label>
+        <input id="bkName" required placeholder="Your name">
+      </div>
+      <div class="field">
+        <label>Mobile *</label>
+        <input id="bkMobile" required pattern="[6-9][0-9]{9}" placeholder="10-digit mobile">
+      </div>
+      <div class="field">
+        <label>Pickup location *</label>
+        <input id="bkPickup" required placeholder="Hotel / bus stand / location">
+      </div>
+      <div class="field">
+        <label>Travel date *</label>
+        <input id="bkDate" required type="date">
+      </div>
+      <div class="field full">
+        <label>Requirements</label>
+        <textarea id="bkNotes" placeholder="Any special requirements?"></textarea>
+      </div>
+      <div class="field full">
+        <div style="padding:15px;border-radius:14px;background:#edf5f0">
+          <b>Trip summary</b>
+          <p style="margin-top:5px;color:#5e7067">
+            ${state.people} people • ${state.days} days • ${state.style}<br>
+            Vehicle: ${state.vehicle}<br>
+            Places: ${state.places.length?state.places.map(id=>PLACES.find(p=>p.id===id)?.name).join(", "):"Not selected"}<br>
+            Rough estimate: <b>${money(estimate(state.vehicle,state.days,state.people))}</b>
+          </p>
+        </div>
+      </div>
+    </form>
+  `;
+}
+
+$("#bookingNext").onclick=()=>{
+  if(bookingStep<4){
+    if(bookingStep===1){
+      const p=$("#bookingPeople");
+      const d=$("#bookingDays");
+      if(p){state.people=Math.max(1,Math.min(12,Number(p.value)||1));}
+      if(d){state.days=Number(d.value)||1;}
+      state.vehicle=recommendedVehicle(state.people);
+    }
+    bookingStep++;
+    renderBooking();
+    return;
+  }
+
+  const form=$("#bookingForm");
+  if(!form.reportValidity())return;
+
+  const id="OOTY-"+Math.random().toString(36).slice(2,8).toUpperCase();
+  const name=$("#bkName").value.trim();
+  const mobile=$("#bkMobile").value.trim();
+  const pickup=$("#bkPickup").value.trim();
+  const date=$("#bkDate").value;
+  const notes=$("#bkNotes").value.trim();
+
+  const places=state.places.map(id=>PLACES.find(p=>p.id===id)?.name).filter(Boolean);
+  const message=
+`Hi OotyRide, NEW BOOKING ${id}
+
+Name: ${name}
+Mobile: ${mobile}
+Pickup: ${pickup}
+Travel date: ${date}
+People: ${state.people}
+Days: ${state.days}
+Travel type: ${state.style}
+Places: ${places.length?places.join(", "):"Not selected"}
+Vehicle: ${state.vehicle}
+Estimate: ${money(estimate(state.vehicle,state.days,state.people))}
+Notes: ${notes||"-"}
+
+Please confirm availability and final price.`;
+
+  const bookings=getBookings();
+  bookings.push({
+    id,name,mobile,pickup,date,
+    people:state.people,days:state.days,
+    style:state.style,vehicle:state.vehicle,
+    places:places.join(", ")
+  });
+  saveBookings(bookings);
+
+  const url=whatsapp(message);
+  window.open(url,"_blank");
+
+  $("#bookingBody").innerHTML=`
+    <div class="success">
+      <div style="font-size:55px">✓</div>
+      <h2>Booking prepared!</h2>
+      <p class="lead" style="margin:8px auto">Your Booking ID</p>
+      <div class="booking-id">${id}</div>
+      <p class="lead" style="margin:0 auto 18px">WhatsApp has been opened with your trip details.</p>
+      <a class="btn btn-p" href="${url}" target="_blank">Open WhatsApp Again</a>
+    </div>
+  `;
+  $("#bookingFooter").style.display="none";
+};
+
+/* CANCEL / CHANGE */
+function openCancel(){
+  $("#cancelModal").classList.add("open");
+}
+$("#cancelMode").onclick=()=>{
+  $("#cancelMode").classList.add("on");
+  $("#changeMode").classList.remove("on");
+  $("#newDateField").style.display="none";
+};
+$("#changeMode").onclick=()=>{
+  $("#changeMode").classList.add("on");
+  $("#cancelMode").classList.remove("on");
+  $("#newDateField").style.display="block";
+};
+$("#cancelSend").onclick=()=>{
+  const id=$("#cancelId").value.trim().toUpperCase().replace(/\s/g,"");
+  const reason=$("#cancelReason").value.trim();
+  const changing=$("#changeMode").classList.contains("on");
+  const newDate=$("#newDate").value;
+  const error=$("#cancelError");
+
+  if(!id)return error.textContent="Enter your Booking ID or mobile number.";
+  if(changing&&!newDate)return error.textContent="Choose the new travel date.";
+
+  const found=getBookings().find(x=>x.id===id||x.mobile===id);
+  let message=`Hi OotyRide, I want to ${changing?"CHANGE MY TRAVEL DATE":"CANCEL MY TRIP"}.
+
+Booking ID / Mobile: ${id}
+`;
+
+  if(found){
+    message+=`Name: ${found.name}
+Original date: ${found.date}
+Vehicle: ${found.vehicle}
+Places: ${found.places}
+`;
+  }
+
+  if(changing)message+=`New date: ${newDate}
+`;
+  message+=`Reason: ${reason||"-"}
+
+Please confirm my request.`;
+
+  window.open(whatsapp(message),"_blank");
+};
+
+const cancelNav=document.createElement("a");
+cancelNav.textContent="Change / Cancel";
+cancelNav.href="#";
+cancelNav.onclick=e=>{e.preventDefault();openCancel()};
+document.querySelector(".links").appendChild(cancelNav);
+
+/* WEATHER */
+let weatherData=null;
+
+function weatherInfo(code){
+  if(code===0)return ["☀️","Clear"];
+  if(code<=2)return ["⛅","Partly cloudy"];
+  if(code===3)return ["☁️","Cloudy"];
+  if(code<=48)return ["🌫️","Foggy"];
+  if(code<=57)return ["🌦️","Drizzle"];
+  if(code<=67)return ["🌧️","Rain"];
+  if(code<=82)return ["🌦️","Showers"];
+  return ["⛈️","Thunderstorm"];
+}
+
+async function loadWeather(){
+  try{
+    const response=await fetch(
+      "https://api.open-meteo.com/v1/forecast?latitude=11.41&longitude=76.70&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FKolkata&forecast_days=7"
+    );
+    if(!response.ok)throw new Error("Weather error");
+    weatherData=await response.json();
+    drawWeather();
+  }catch(e){
+    $("#weatherNow").innerHTML="<div><h3>Weather unavailable</h3><p>Please check your internet connection and refresh the page.</p></div>";
+  }
+}
+
+function drawWeather(){
+  const c=weatherInfo(weatherData.current.weather_code);
+
+  $("#weatherNow").innerHTML=`
+    <div class="weather-main">
+      <div class="weather-icon">${c[0]}</div>
+      <div>
+        <div class="temp">${Math.round(weatherData.current.temperature_2m)}°C</div>
+        <strong>${c[1]} in Ooty</strong>
+        <small>Humidity ${weatherData.current.relative_humidity_2m}% • Wind ${Math.round(weatherData.current.wind_speed_10m)} km/h</small>
+      </div>
+    </div>
+  `;
+
+  $("#forecast").innerHTML=weatherData.daily.time.map((date,i)=>{
+    const x=weatherInfo(weatherData.daily.weather_code[i]);
+    const d=new Date(date);
+    return `
+      <div class="forecast-day">
+        <b>${d.toLocaleDateString("en-IN",{weekday:"short"})}</b>
+        <span>${x[0]}</span>
+        <b>${Math.round(weatherData.daily.temperature_2m_max[i])}°</b>
+        <small>${Math.round(weatherData.daily.temperature_2m_min[i])}°</small>
+      </div>
+    `;
+  }).join("");
+}
+
+$("#travelDate").min=new Date().toISOString().split("T")[0];
+$("#travelDate").onchange=()=>{
+  if(!weatherData)return;
+  const selected=$("#travelDate").value;
+  const index=weatherData.daily.time.indexOf(selected);
+  if(index<0){
+    $("#weatherAdvice").textContent="The selected date is outside the current 7-day forecast.";
+    return;
+  }
+  const rain=weatherData.daily.precipitation_probability_max[index];
+  const max=weatherData.daily.temperature_2m_max[index];
+  $("#weatherAdvice").textContent =
+    rain>=60
+      ? `Rain chance is around ${rain}%. Carry rain protection and comfortable footwear.`
+      : `Rain chance is around ${rain}%. Expected high is ${Math.round(max)}°C. Good conditions for planning, but check again before departure.`;
+};
+
+/* REVIEWS */
+let selectedStars=0;
+
+function renderReviews(){
+  let reviews=[];
+  try{reviews=JSON.parse(localStorage.getItem(REVIEW_KEY))||[]}catch{}
+
+  if(!reviews.length){
+    $("#reviewSummary").textContent="No reviews yet. Be the first traveller to leave feedback.";
+    $("#reviewList").innerHTML="";
+    return;
+  }
+
+  const avg=reviews.reduce((s,r)=>s+r.rating,0)/reviews.length;
+  $("#reviewSummary").innerHTML=`⭐ ${avg.toFixed(1)} / 5 &nbsp; • &nbsp; ${reviews.length} traveller review${reviews.length>1?"s":""}`;
+
+  $("#reviewList").innerHTML=reviews.slice().reverse().map(r=>`
+    <div class="review">
+      <strong>${escapeHTML(r.name)}</strong>
+      <div style="color:#d9a032">${"★".repeat(r.rating)}${"☆".repeat(5-r.rating)}</div>
+      <p>${escapeHTML(r.text)}</p>
+      <small>${new Date(r.date).toLocaleDateString("en-IN")}</small>
+    </div>
+  `).join("");
+}
+
+function escapeHTML(s){
+  return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+}
+
+$$("[data-star]").forEach(btn=>{   btn.onclick=()=>{     selectedStars=Number(btn.dataset.star);     $$
+("[data-star]").forEach(x=>x.classList.toggle("on",Number(x.dataset.star)<=selectedStars));
+  };
+});
+
+$("#feedbackForm").onsubmit=e=>{
+  e.preventDefault();
+  if(!selectedStars){
+    alert("Please select a rating.");
+    return;
+  }
+  let reviews=[];
+  try{reviews=JSON.parse(localStorage.getItem(REVIEW_KEY))||[]}catch{}
+  reviews.push({
+    name:$("#reviewName").value.trim(),
+    text:$("#reviewText").value.trim(),     rating:selectedStars,     date:new Date().toISOString()   });   localStorage.setItem(REVIEW_KEY,JSON.stringify(reviews));   e.target.reset();   selectedStars=0;   $$("[data-star]").forEach(x=>x.classList.remove("on"));
+  renderReviews();
+};
+
+/* CHAT */
+function addMessage(text,type="bot"){
+  const el=document.createElement("div");
+  el.className="message "+type;
+  el.textContent=text;
+  $("#messages").appendChild(el);
+  $("#messages").scrollTop=$("#messages").scrollHeight;
+}
+
+function chatAnswer(q){
+  q=q.toLowerCase();
+
+  if(q.includes("place")||q.includes("visit")||q.includes("best")){
+    return "Popular places:\n• Doddabetta Peak\n• Ooty Lake\n• Dolphin's Nose\n• Lamb's Rock\n• Botanical Garden\n• Kodaikanal Lake\n• Pillar Rocks\n• Tea Gardens\n• Mattupetty Dam\n• Eravikulam National Park";
+  }
+  if(q.includes("vehicle")||q.includes("car")){
+    return "Vehicle guide:\n• 1–4: Sedan\n• 5–6: SUV\n• 7: Innova\n• 8–12: Tempo Traveller";
+  }
+  if(q.includes("weather")||q.includes("rain")){
+    return "You can check the live Ooty weather and 7-day forecast in the Weather section.";
+  }
+  if(q.includes("price")||q.includes("cost")){
+    return "The website provides a rough vehicle estimate. Final price depends on route, vehicle, days and requirements.";
+  }
+  if(q.includes("book")||q.includes("reserve")){
+    return "Tap Book Your Trip. Choose group, places, vehicle and your details. WhatsApp will open with the booking message.";
+  }
+  return "I can help with Ooty places, vehicles, weather, prices and booking. Try asking: “best places”, “vehicle guide”, or “book trip”.";
+}
+
+$("#chatToggle").onclick=()=>$("#chat").classList.toggle("open");
+$("#chatClose").onclick=()=>$("#chat").classList.remove("open");
+$("#mobileChat").onclick=()=>$("#chat").classList.toggle("open");
+$("#mobileMore").onclick=()=>$("#drawer").classList.toggle("open");
+
+function sendChat(){
+  const input=$("#chatInput");
+  const q=input.value.trim();
+  if(!q)return;
+  addMessage(q,"user");
+  input.value="";
+  setTimeout(()=>addMessage(chatAnswer(q),"bot"),250);
+}
+$("#chatSend").onclick=sendChat;
+$("#chatInput").addEventListener("keydown",e=>{if(e.key==="Enter")sendChat()});
+$$("[data-chat]").forEach(btn=>{   btn.onclick=()=>{     const q=btn.dataset.chat;     addMessage(q,"user");
+     setTimeout(()=>addMessage(chatAnswer(q),"bot"),200);
+   };
+});
+
+/* INITIALISE */ renderPlaces(); renderVehicles(); renderReviews(); updatePlanner(); loadWeather();  /* ESC CLOSE */ document.addEventListener("keydown",e=>{   if(e.key==="Escape"){     $$
+(".modal.open").forEach(x=>closeModal(x.id));
+    $("#chat").classList.remove("open");
+  }
+});
+</script>
+</body> 
+</html>
